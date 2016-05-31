@@ -1,5 +1,4 @@
-﻿@*@model IEnumerable<CascadeDropdown.ViewModel.CountryViewModel>*@
-@model IEnumerable<CascadeDropdown.Models.Country>
+﻿@model IEnumerable<CascadeDropdown.ViewModel.StateViewModel>
 
 @{
     ViewBag.Title = "CountryList";
@@ -14,7 +13,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CountryName)
+            @Html.DisplayNameFor(model => model.StateName)
         </th>
         <th></th>
     </tr>
@@ -22,12 +21,12 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.CountryName)
+            @Html.DisplayFor(modelItem => item.StateName)
         </td>
-        <td>
+        @*<td>
             @Html.ActionLink("Edit", "EditCountry", new { id=item.CountryID }) |
             @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
+        </td>*@
     </tr>
 }
 
